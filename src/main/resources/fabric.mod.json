@@ -1,0 +1,38 @@
+{
+
+    "schemaVersion": 1,
+    "id": "mod_codenamed_wood",
+    "version": "${mod_version}",
+    "name": "Mod Codenamed Wood",
+    "description": "W.I.P.",
+    "authors": [
+        "Sindercube"
+    ],
+    "contact": {
+        "sources": "https://github.com/Sindercube/Mod-Codenamed-Wood"
+    },
+    "license": "GPL-3.0",
+
+    "entrypoints": {
+        "main": [ "com.sindercube.wood.ModCodenamedWood" ],
+        "client": [ "com.sindercube.wood.client.ModCodenamedWoodClient" ]
+    },
+
+    "depends": {
+        "fabric-api": "*"
+    },
+
+    "accessWidener" : "mod_codenamed_wood.accesswidener",
+    "mixins": [
+        "mod_codenamed_wood.mixins.json",
+        "mod_codenamed_wood.client.mixins.json"
+    ],
+    "custom": {
+        "loom:injected_interfaces": {
+            "net/minecraft/class_1799": [ "com/sindercube/wood/asm/ItemStackAccess" ],
+            "net/minecraft/class_1887": [ "com/sindercube/wood/asm/EnchantmentAccess" ],
+            "net/minecraft/class_1890": [ "com/sindercube/wood/asm/EnchantmentHelperAccess" ]
+        }
+    }
+
+}

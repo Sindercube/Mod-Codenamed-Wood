@@ -1,0 +1,6 @@
+accessWidener v2 named
+
+accessible class net/minecraft/enchantment/EnchantmentHelper$Consumer
+accessible method net/minecraft/enchantment/EnchantmentHelper forEachEnchantment (Lnet/minecraft/enchantment/EnchantmentHelper$Consumer;Lnet/minecraft/item/ItemStack;)V
+
+accessible method net/minecraft/component/DataComponentTypes register (Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/minecraft/component/DataComponentType;

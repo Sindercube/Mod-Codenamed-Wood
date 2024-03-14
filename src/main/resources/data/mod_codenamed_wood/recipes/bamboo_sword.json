@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": { "item": "minecraft:bamboo" }
+    },
+    "result": { "item": "mod_codenamed_wood:bamboo_sword" }
+}

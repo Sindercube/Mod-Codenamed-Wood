@@ -1,0 +1,40 @@
+plugins {
+	id 'fabric-loom' version '1.5-SNAPSHOT'
+}
+
+version = mod_version
+base.archivesName = mod_id
+
+loom {
+	splitEnvironmentSourceSets()
+	accessWidenerPath = file("src/main/resources/mod_codenamed_wood.accesswidener")
+
+	mods {
+		mod_codenamed_wood {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+repositories {
+	maven {
+		url 'https://api.modrinth.com/maven'
+		content { includeGroup "maven.modrinth" }
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:$minecraft_version"
+	mappings "net.fabricmc:yarn:$minecraft_version+$yarn_mappings:v2"
+	modImplementation "net.fabricmc:fabric-loader:$loader_version"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:$fabric_version"
+
+	modLocalRuntime "maven.modrinth:modmenu:10.0.0-alpha.3"
+}
+
+processResources {
+	filesMatching("fabric.mod.json") {
+		expand project.properties
+	}
+}

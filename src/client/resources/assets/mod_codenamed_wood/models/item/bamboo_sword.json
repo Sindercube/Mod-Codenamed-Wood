@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mod_codenamed_wood:item/bamboo_sword"
+  }
+}
